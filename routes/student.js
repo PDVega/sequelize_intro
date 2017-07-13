@@ -60,6 +60,9 @@ router.post('/edit/:id', function(req, res, next) {
     .then(() => {
       res.redirect('/students')
     })
+    .catch((err)=>{
+      res.render('add_student', {err:err.message});
+    })
   })
 });
 

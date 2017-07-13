@@ -6,7 +6,18 @@ module.exports = function(sequelize, DataTypes) {
     email: {
       type : DataTypes.STRING,
         validate : {
-          isEmail : {msg : "Email format is incorrect!"}
+          isUnique : (value,next)=>{
+            Student.find({
+              where : {email : value},
+              attributes:['id']
+            })
+            .done((err,user)=>{
+              if(err)
+              return next('Email address already in use!');
+              next();
+            })
+          },
+            isEmail : {msg : "Email format is incorrect!"}
         }
     },
     jurusan: DataTypes.STRING
