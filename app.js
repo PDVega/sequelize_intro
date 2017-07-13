@@ -6,8 +6,8 @@ const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
 const teachers = require('./routes/teachers')
-// const contacts = require('./routes/contact')
-// const groups = require('./routes/group')
+const subjects = require('./routes/subjects')
+const students = require('./routes/student')
 // const profiles = require('./routes/profile')
 // const Contact_Group = require('./routes/contact_group')
 // const ContactsDetail = require('./routes/contactsDetail')
@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index);
 app.use('/teachers', teachers);
-// app.use('/groups', groups);
-// app.use('/profiles', profiles);
+app.use('/subjects', subjects);
+app.use('/students', students);
 // app.use('/address', address);
 // app.use('/contacts-groups', Contact_Group);
 // app.use('/contactsDetail', ContactsDetail)

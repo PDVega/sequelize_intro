@@ -23,7 +23,8 @@
   </div>
   
   <div class="container">
-  <h3>Show Data Teacher</h3>
+  <h3>Show Data Student</h3>
+  <h5><a href="#">Add New Student</a></h5>
   <br>
 <table class="table table-hover">
   <thead>
@@ -31,16 +32,20 @@
       <th>ID</th>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>E-Mail</th>
+      <th>Email</th>
+      <th>Jurusan</th>
+      <th>Option</th>
     </tr>
   </thead>
   <tbody>
-    <% data_teachers.forEach(teacher => { %>
+    <% data_students.forEach(student => { %>
     <tr>
-      <td><%= teacher.id %></td>
-      <td><%= teacher.first_name%></td>
-      <td><%= teacher.last_name%></td>
-      <td><%= teacher.email%></td>
+      <td><%= student.id %></td>
+      <td><%= student.first_name%></td>
+      <td><%= student.last_name%></td>
+      <td><%= student.email%></td>
+      <td><%= student.jurusan%></td>
+      <td><a href="#">Update</a>    |    <a href="#">Delete</a></td>
     </tr>
     <% })%>
   </tbody>
