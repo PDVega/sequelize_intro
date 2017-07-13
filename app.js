@@ -8,11 +8,8 @@ const index = require('./routes/index');
 const teachers = require('./routes/teachers')
 const subjects = require('./routes/subjects')
 const students = require('./routes/student')
-const add_student = require('./routes/add_student')
-// const profiles = require('./routes/profile')
-// const Contact_Group = require('./routes/contact_group')
-// const ContactsDetail = require('./routes/contactsDetail')
-// const GroupsDetail = require('./routes/groupsDetail') 
+// const add_student = require('./routes/add_student')
+// const edit_student = require('./routes/edit_student')
 
 app.set('view engine', 'ejs');
 
@@ -24,9 +21,8 @@ app.use('/', index);
 app.use('/teachers', teachers);
 app.use('/subjects', subjects);
 app.use('/students', students);
-app.use('/students/add', add_student);
-// app.use('/contacts-groups', Contact_Group);
-// app.use('/contactsDetail', ContactsDetail)
-// app.use('/groupsDetail', GroupsDetail)
+// app.use('/students/add', students);
+// app.use('/students/add', add_student);
+// app.use('/students/edit', edit_student);
 
 app.listen(3000)

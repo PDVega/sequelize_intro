@@ -23,27 +23,27 @@
     </div>
     
     <div class="container">  
-      <h3>Input New Student</h3>
+      <h3>Update Student</h3>
       <br>
-      <form action="/students/add" method="post">
+      <form action="/students/edit/<%= data_student.id%>" method="post">
         <div class="form-group">  
           <label>First Name : </label>
-          <input class="form-control" type="text" name="first_name" value="">
+          <input class="form-control" type="text" name="first_name" value="<%= data_student.first_name%>">
         </div>
         <div class="form-group">
           <label>Last Name : </label>
-          <input class="form-control" type="text" name="last_name" value="">
+          <input class="form-control" type="text" name="last_name" value="<%= data_student.last_name%>">
         </div>
         <div class="form-group">
           <label>Email : </label>
-          <input class="form-control" type="text" name="email" value="">
+          <input class="form-control" type="text" name="email" value="<%= data_student.email%>">
         </div>
         <div class="form-group">
           <label>Jurusan : </label>
-          <input class="form-control" type="text" name="jurusan" value="">
+          <input class="form-control" type="text" name="jurusan" value="<%= data_student.jurusan%>">
         </div>
           <br>
-        <button type="submit" name="" class="btn btn-default">Add New Student</button>
+        <button type="submit" name="" class="btn btn-default">Update Student</button>
       </form>
     </div>
   </body>
