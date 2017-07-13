@@ -8,6 +8,7 @@ const index = require('./routes/index');
 const teachers = require('./routes/teachers')
 const subjects = require('./routes/subjects')
 const students = require('./routes/student')
+const add_student = require('./routes/add_student')
 // const profiles = require('./routes/profile')
 // const Contact_Group = require('./routes/contact_group')
 // const ContactsDetail = require('./routes/contactsDetail')
@@ -23,7 +24,7 @@ app.use('/', index);
 app.use('/teachers', teachers);
 app.use('/subjects', subjects);
 app.use('/students', students);
-// app.use('/address', address);
+app.use('/students/add', add_student);
 // app.use('/contacts-groups', Contact_Group);
 // app.use('/contactsDetail', ContactsDetail)
 // app.use('/groupsDetail', GroupsDetail)
