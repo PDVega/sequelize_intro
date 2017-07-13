@@ -13,7 +13,7 @@ router.get('/', (req, res, next)=>{
 router.get('/add', (req, res, next) => {
   model.Student.findAll()
   .then(data => {
-    res.render('add_student', {data_student : data})
+    res.render('add_student', {data_student : data, err:null })
   })
 })
 
@@ -30,6 +30,9 @@ router.post('/add', (req, res, next) => {
       })
     .then((student) => {
       res.redirect('/students')
+  })
+  .catch((err)=>{
+    res.render('add_student', {err:err.message});
   })
 })
 
